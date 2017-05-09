@@ -1,0 +1,10 @@
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Release\ClassLibrary1.dll.config
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Release\ClassLibrary1.dll
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Release\ClassLibrary1.pdb
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Release\EntityFramework.dll
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Release\EntityFramework.SqlServer.dll
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Release\EntityFramework.xml
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Release\EntityFramework.SqlServer.xml
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\obj\Release\ClassLibrary1.csprojResolveAssemblyReference.cache
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\obj\Release\ClassLibrary1.dll
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\obj\Release\ClassLibrary1.pdb

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32cb84decf374f45a9d4cefd29786322" Name="Diagram1">
+        <EntityTypeShape EntityType="ГостиницаModel.Бронирование" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ГостиницаModel.Категория" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ГостиницаModel.Клиенты" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ГостиницаModel.Номера" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ГостиницаModel.Проживание" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ГостиницаModel.FK__Бронирова__КодНо__108B795B" ManuallyRouted="false" />
+        <AssociationConnector Association="ГостиницаModel.FK__Проживани__КодБр__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="ГостиницаModel.FK__Номера__КодКатег__117F9D94" ManuallyRouted="false" />
+        <AssociationConnector Association="ГостиницаModel.FK__Проживани__КодКл__1367E606" ManuallyRouted="false" />
+        <AssociationConnector Association="ГостиницаModel.FK__Проживани__КодНо__145C0A3F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

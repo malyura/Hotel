@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ГостиницаModelStoreContainer" CdmEntityContainer="ГостиницаContext">
+    <EntitySetMapping Name="Бронирование">
+      <EntityTypeMapping TypeName="ГостиницаModel.Бронирование">
+        <MappingFragment StoreEntitySet="Бронирование">
+          <ScalarProperty Name="КодБронирования" ColumnName="КодБронирования" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="ДатаБронирования" ColumnName="ДатаБронирования" />
+          <ScalarProperty Name="ДатаЗаселения" ColumnName="ДатаЗаселения" />
+          <ScalarProperty Name="ДатаВыселения" ColumnName="ДатаВыселения" />
+          <ScalarProperty Name="Примечание" ColumnName="Примечание" />
+          <ScalarProperty Name="КодНомера" ColumnName="КодНомера" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Категория">
+      <EntityTypeMapping TypeName="ГостиницаModel.Категория">
+        <MappingFragment StoreEntitySet="Категория">
+          <ScalarProperty Name="КодКатегории" ColumnName="КодКатегории" />
+          <ScalarProperty Name="Категория1" ColumnName="Категория" />
+          <ScalarProperty Name="КолМест" ColumnName="КолМест" />
+          <ScalarProperty Name="Цена" ColumnName="Цена" />
+          <ScalarProperty Name="Описание" ColumnName="Описание" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Клиенты">
+      <EntityTypeMapping TypeName="ГостиницаModel.Клиенты">
+        <MappingFragment StoreEntitySet="Клиенты">
+          <ScalarProperty Name="КодКлиента" ColumnName="КодКлиента" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="НомерПаспорта" ColumnName="НомерПаспорта" />
+          <ScalarProperty Name="Регистрация" ColumnName="Регистрация" />
+          <ScalarProperty Name="Гражданство" ColumnName="Гражданство" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Номера">
+      <EntityTypeMapping TypeName="ГостиницаModel.Номера">
+        <MappingFragment StoreEntitySet="Номера">
+          <ScalarProperty Name="КодНомера" ColumnName="КодНомера" />
+          <ScalarProperty Name="НомерКомнаты" ColumnName="НомерКомнаты" />
+          <ScalarProperty Name="КодКатегории" ColumnName="КодКатегории" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Проживание">
+      <EntityTypeMapping TypeName="ГостиницаModel.Проживание">
+        <MappingFragment StoreEntitySet="Проживание">
+          <ScalarProperty Name="КодПроживания" ColumnName="КодПроживания" />
+          <ScalarProperty Name="ДатаЗаселения" ColumnName="ДатаЗаселения" />
+          <ScalarProperty Name="ДатаВыселения" ColumnName="ДатаВыселения" />
+          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+          <ScalarProperty Name="ДатаОплаты" ColumnName="ДатаОплаты" />
+          <ScalarProperty Name="КодНомера" ColumnName="КодНомера" />
+          <ScalarProperty Name="КодКлиента" ColumnName="КодКлиента" />
+          <ScalarProperty Name="КодБронирования" ColumnName="КодБронирования" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

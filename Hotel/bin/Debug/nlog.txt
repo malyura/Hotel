@@ -1,0 +1,454 @@
+2016/04/27 14:19:46.228|Info|Запуск программы
+2016/04/27 14:19:58.034|Info|Завершение программы
+2016/04/27 14:28:06.218|Info|Запуск программы
+2016/04/27 14:28:12.052|Info|Завершение программы
+2016/04/27 14:36:00.092|Info|Запуск программы
+2016/04/27 14:36:10.984|Info|Завершение программы
+2016/04/27 14:36:25.754|Info|Запуск программы
+2016/04/27 14:36:35.927|Info|Завершение программы
+2016/04/27 14:36:46.266|Info|Запуск программы
+2016/04/27 14:37:23.494|Info|Завершение программы
+2016/04/27 14:39:43.586|Info|Запуск программы
+2016/04/27 14:40:32.246|Info|Завершение программы
+2016/04/27 14:43:49.719|Info|Запуск программы
+2016/04/27 14:43:56.251|Info|Завершение программы
+2016/04/27 14:46:03.424|Info|Запуск программы
+2016/04/27 14:46:34.282|Info|Завершение программы
+2016/04/27 14:47:51.016|Info|Запуск программы
+2016/04/27 14:48:39.059|Info|Завершение программы
+2016/04/28 13:36:06.383|Info|Запуск программы
+2016/04/28 13:36:17.034|Info|Завершение программы
+2016/05/05 01:24:47.599|Info|Запуск программы
+2016/05/05 01:25:06.038|Debug|System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception: Не удается найти указанный файл
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   в System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   в System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   в System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   в System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   в System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в Hotel.Form1.GetResidents() в d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\Form1.cs:строка 61
+   в Hotel.Form1..ctor() в d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\Form1.cs:строка 29
+2016/05/05 01:25:26.818|Debug|System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception: Не удается найти указанный файл
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   в System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   в System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   в System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   в System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   в System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   в System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   в System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   в System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   в System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   в System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   в Hotel.Form1.GetSumPrice(Decimal year) в d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\Form1.cs:строка 179
+   в Hotel.Form1.graphic1_Load(Object sender, EventArgs e) в d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\Form1.cs:строка 193
+2016/05/05 01:25:38.633|Info|Завершение программы
+2016/05/05 01:26:03.794|Info|Запуск программы
+2016/05/05 01:27:02.876|Info|Завершение программы
+2016/05/05 01:31:48.350|Info|Запуск программы
+2016/05/05 01:32:42.045|Info|Завершение программы
+2016/05/05 01:34:50.058|Info|Запуск программы
+2016/05/05 01:35:47.589|Info|Завершение программы
+2016/05/05 01:46:54.412|Info|Запуск программы
+2016/05/05 01:47:38.473|Info|Завершение программы
+2016/05/05 01:49:41.439|Info|Запуск программы
+2016/05/05 01:50:13.667|Info|Завершение программы
+2016/05/05 01:50:34.329|Info|Запуск программы
+2016/05/05 01:51:04.837|Info|Завершение программы
+2016/05/05 01:58:57.611|Info|Запуск программы
+2016/05/05 02:02:40.715|Info|Запуск программы
+2016/05/05 02:04:44.010|Info|Завершение программы
+2016/05/05 02:10:19.544|Info|Запуск программы
+2016/05/05 02:14:02.946|Info|Завершение программы
+2016/05/05 02:14:08.602|Info|Запуск программы
+2016/05/05 02:17:27.639|Info|Завершение программы
+2016/05/05 15:00:16.672|Info|Запуск программы
+2016/05/05 15:00:33.968|Info|Завершение программы
+2016/05/14 16:27:34.644|Info|Запуск программы
+2016/05/14 16:33:53.461|Info|Завершение программы
+2016/05/14 16:35:02.395|Info|Запуск программы
+2016/05/14 17:14:54.694|Info|Завершение программы
+2016/05/14 18:32:36.385|Info|Запуск программы
+2016/05/14 18:55:34.657|Info|Завершение программы
+2016/05/14 19:13:58.138|Info|Запуск программы
+2016/05/14 19:14:54.953|Info|Завершение программы
+2016/05/14 19:20:51.993|Info|Запуск программы
+2016/05/14 19:21:16.904|Info|Завершение программы
+2016/05/14 19:22:11.417|Info|Запуск программы
+2016/05/14 19:22:21.808|Info|Завершение программы
+2016/05/14 19:23:33.067|Info|Запуск программы
+2016/05/14 19:23:53.604|Info|Завершение программы
+2016/05/14 19:26:41.637|Info|Запуск программы
+2016/05/14 19:28:05.083|Info|Завершение программы
+2016/05/14 19:28:29.365|Info|Запуск программы
+2016/05/14 19:30:06.849|Info|Завершение программы
+2016/05/14 19:31:01.369|Info|Запуск программы
+2016/05/14 19:40:43.173|Info|Завершение программы
+2016/05/14 19:44:39.003|Info|Запуск программы
+2016/05/14 19:46:31.988|Info|Завершение программы
+2016/05/14 19:46:39.190|Info|Запуск программы
+2016/05/14 19:46:42.184|Info|Завершение программы
+2016/05/14 19:46:47.545|Info|Запуск программы
+2016/05/14 19:46:50.730|Info|Завершение программы
+2016/05/15 15:20:12.306|Info|Запуск программы
+2016/05/15 15:20:40.889|Info|Завершение программы
+2016/05/15 19:06:00.695|Info|Запуск программы
+2016/05/15 19:54:23.555|Info|Завершение программы
+2016/05/15 19:55:57.303|Info|Запуск программы
+2016/05/15 19:58:42.399|Info|Завершение программы
+2016/05/15 20:01:08.877|Info|Запуск программы
+2016/05/15 20:18:42.047|Info|Завершение программы
+2016/05/15 22:37:11.855|Info|Запуск программы
+2016/05/15 22:37:31.622|Info|Завершение программы
+2016/05/16 13:28:15.225|Info|Запуск программы
+2016/05/16 14:08:36.307|Info|Завершение программы
+2016/05/16 16:13:08.198|Info|Запуск программы
+2016/05/16 16:14:22.249|Info|Завершение программы
+2016/05/16 16:20:43.018|Info|Запуск программы
+2016/05/16 16:27:47.487|Info|Завершение программы
+2016/05/17 13:01:18.508|Info|Запуск программы
+2016/05/17 13:39:24.947|Info|Запуск программы
+2016/05/17 13:43:10.808|Info|Запуск программы
+2016/05/17 13:43:33.891|Info|Запуск программы
+2016/05/17 13:44:31.722|Info|Завершение программы
+2016/05/17 13:51:12.384|Info|Запуск программы
+2016/05/17 13:51:39.263|Info|Запуск программы
+2016/05/17 13:57:46.801|Info|Запуск программы
+2016/05/17 14:00:11.080|Info|Запуск программы
+2016/05/17 14:05:10.915|Info|Запуск программы
+2016/05/17 14:09:50.804|Info|Запуск программы
+2016/05/17 14:16:39.885|Info|Запуск программы
+2016/05/17 14:17:30.237|Info|Запуск программы
+2016/05/17 14:21:00.227|Info|Запуск программы
+2016/05/17 14:27:43.921|Info|Завершение программы
+2016/05/17 14:31:40.126|Info|Запуск программы
+2016/05/17 14:33:00.056|Info|Завершение программы
+2016/05/17 14:37:55.463|Info|Запуск программы
+2016/05/17 14:38:55.109|Info|Запуск программы
+2016/05/17 14:41:50.158|Info|Запуск программы
+2016/05/17 14:43:17.591|Info|Завершение программы
+2016/05/17 14:46:26.923|Info|Запуск программы
+2016/05/17 14:48:06.120|Info|Завершение программы
+2016/05/17 15:11:32.305|Info|Запуск программы
+2016/05/17 15:18:26.506|Info|Запуск программы
+2016/05/17 15:22:05.195|Info|Завершение программы
+2016/05/17 15:27:29.802|Info|Запуск программы
+2016/05/17 15:44:42.339|Info|Завершение программы
+2016/05/17 15:48:38.049|Info|Запуск программы
+2016/05/17 16:01:55.854|Info|Завершение программы
+2016/05/17 16:03:06.593|Info|Запуск программы
+2016/05/17 16:03:20.721|Info|Завершение программы
+2016/05/18 14:03:24.196|Info|Запуск программы
+2016/05/18 14:14:48.829|Info|Завершение программы
+2016/05/18 14:16:43.924|Info|Запуск программы
+2016/05/18 14:27:20.442|Info|Завершение программы
+2016/05/18 14:29:15.826|Info|Запуск программы
+2016/05/18 15:13:39.948|Info|Запуск программы
+2016/05/18 15:13:43.508|Info|Завершение программы
+2016/05/20 21:49:36.721|Info|Запуск программы
+2016/05/20 21:53:41.013|Info|Запуск программы
+2016/05/20 22:02:10.257|Info|Запуск программы
+2016/05/20 22:06:47.304|Info|Запуск программы
+2016/05/20 22:12:47.099|Info|Завершение программы
+2016/05/20 22:22:30.677|Info|Запуск программы
+2016/05/20 22:30:45.952|Info|Запуск программы
+2016/05/20 22:32:36.677|Info|Завершение программы
+2016/05/20 22:33:38.543|Info|Запуск программы
+2016/05/20 22:36:25.344|Info|Запуск программы
+2016/05/20 22:36:28.710|Info|Завершение программы
+2016/05/20 22:44:44.472|Info|Запуск программы
+2016/05/20 22:51:44.349|Info|Запуск программы
+2016/05/20 22:54:21.496|Info|Завершение программы
+2016/05/20 22:59:43.555|Info|Запуск программы
+2016/05/20 23:02:51.565|Info|Завершение программы
+2016/05/20 23:03:02.129|Info|Запуск программы
+2016/05/20 23:03:28.994|Info|Завершение программы
+2016/05/20 23:05:13.652|Info|Запуск программы
+2016/05/20 23:05:24.252|Info|Завершение программы
+2016/05/20 23:23:55.271|Info|Запуск программы
+2016/05/20 23:24:57.760|Info|Завершение программы
+2016/05/21 01:31:49.547|Info|Запуск программы
+2016/05/21 01:31:54.027|Info|Завершение программы
+2016/05/21 09:20:51.896|Info|Запуск программы
+2016/05/21 09:21:00.436|Info|Завершение программы
+2016/05/21 10:44:24.731|Info|Запуск программы
+2016/05/21 10:49:46.748|Info|Завершение программы
+2016/05/21 10:50:40.148|Info|Запуск программы
+2016/05/21 10:51:27.569|Info|Завершение программы
+2016/08/21 14:49:01.043|Info|Запуск программы
+2016/08/21 14:50:19.223|Info|Завершение программы
+2016/09/03 11:21:34.277|Info|Запуск программы
+2016/09/03 11:37:17.554|Info|Завершение программы
+2016/09/03 12:27:55.508|Info|Запуск программы
+2016/09/03 12:37:30.887|Info|Завершение программы
+2016/09/03 12:38:25.007|Info|Запуск программы
+2016/09/03 12:41:52.934|Info|Завершение программы
+2016/09/07 21:20:38.608|Info|Запуск программы
+2016/09/07 21:23:58.395|Info|Запуск программы
+2016/09/07 21:26:20.410|Info|Завершение программы
+2016/09/07 21:26:58.072|Info|Запуск программы
+2016/09/07 21:27:44.062|Info|Завершение программы
+2016/09/07 21:28:50.024|Info|Запуск программы
+2016/09/07 21:29:11.552|Info|Завершение программы
+2016/09/07 21:44:42.705|Info|Запуск программы
+2016/09/07 21:50:06.205|Info|Запуск программы
+2016/09/07 21:51:41.020|Info|Завершение программы
+2016/09/07 21:53:18.405|Info|Запуск программы
+2016/09/07 21:54:42.211|Info|Запуск программы
+2016/09/07 21:58:02.573|Info|Запуск программы
+2016/09/07 21:58:19.361|Info|Завершение программы
+2016/09/07 22:02:34.294|Info|Запуск программы
+2016/09/07 22:08:28.331|Info|Завершение программы
+2016/09/10 16:45:51.935|Info|Запуск программы
+2016/09/10 16:49:28.973|Info|Завершение программы
+2016/09/10 18:01:07.108|Info|Запуск программы
+2016/09/10 19:06:44.151|Info|Завершение программы
+2016/09/10 19:09:06.583|Info|Запуск программы
+2016/09/10 19:20:48.021|Info|Завершение программы
+2016/09/10 19:30:13.642|Info|Запуск программы
+2016/09/10 19:32:29.980|Info|Завершение программы
+2016/09/10 19:34:05.764|Info|Запуск программы
+2016/09/10 19:34:14.539|Info|Завершение программы
+2016/09/16 19:02:36.568|Info|Запуск программы
+2016/09/16 19:03:00.088|Info|Завершение программы
+2016/09/16 19:45:22.909|Info|Запуск программы
+2016/09/16 19:48:24.185|Info|Завершение программы
+2016/09/17 10:38:50.254|Info|Запуск программы
+2016/09/17 10:40:10.562|Info|Завершение программы
+2016/09/17 10:48:18.067|Info|Запуск программы
+2016/09/17 10:49:06.340|Info|Завершение программы
+2016/09/17 13:59:32.841|Info|Запуск программы
+2016/09/17 16:39:06.490|Info|Завершение программы
+2016/09/27 07:45:27.734|Info|Запуск программы
+2016/09/27 07:45:43.740|Info|Завершение программы
+2016/10/03 07:39:51.784|Info|Запуск программы
+2016/10/03 07:40:11.156|Info|Завершение программы
+2016/10/03 18:54:26.475|Info|Запуск программы
+2016/10/03 18:55:04.774|Info|Завершение программы
+2016/10/09 11:38:28.707|Info|Запуск программы
+2016/10/09 11:38:50.784|Info|Завершение программы
+2016/10/09 13:08:25.277|Info|Запуск программы
+2016/10/09 13:11:03.809|Info|Завершение программы
+2016/10/09 13:11:34.214|Info|Запуск программы
+2016/10/09 13:12:08.650|Info|Завершение программы
+2016/10/09 13:13:55.114|Info|Запуск программы
+2016/10/09 13:15:07.536|Info|Завершение программы
+2016/10/09 13:57:57.416|Info|Запуск программы
+2016/10/09 13:58:36.215|Info|Завершение программы
+2016/10/09 14:01:00.802|Info|Запуск программы
+2016/10/09 14:01:35.921|Info|Завершение программы
+2016/10/09 14:01:56.738|Info|Запуск программы
+2016/10/09 14:03:32.993|Info|Завершение программы
+2016/10/09 14:05:24.788|Info|Запуск программы
+2016/10/09 14:05:45.525|Info|Завершение программы
+2016/10/09 18:22:04.499|Info|Запуск программы
+2016/10/09 18:22:13.750|Info|Завершение программы
+2016/11/05 18:10:15.278|Info|Запуск программы
+2016/11/05 18:12:06.402|Info|Завершение программы
+2016/11/18 21:13:09.602|Info|Запуск программы
+2016/11/18 21:19:25.976|Info|Запуск программы
+2016/11/18 21:23:25.628|Info|Запуск программы
+2016/11/18 21:23:51.003|Info|Запуск программы
+2016/11/18 21:25:32.050|Info|Запуск программы
+2016/11/18 21:26:54.837|Info|Запуск программы
+2016/11/18 21:29:34.819|Info|Запуск программы
+2016/11/18 21:32:43.991|Info|Запуск программы
+2016/11/18 21:32:59.933|Info|Запуск программы
+2016/11/18 21:33:09.635|Info|Завершение программы
+2016/11/18 21:34:01.211|Info|Запуск программы
+2016/11/18 21:34:25.380|Info|Завершение программы
+2016/11/18 21:49:56.232|Info|Запуск программы
+2016/11/18 21:52:58.669|Info|Запуск программы
+2016/11/18 21:53:36.415|Info|Завершение программы
+2016/11/18 22:00:28.785|Info|Запуск программы
+2016/11/18 22:06:18.121|Info|Запуск программы
+2016/11/18 22:06:59.142|Info|Завершение программы
+2016/11/18 22:07:23.771|Info|Запуск программы
+2016/11/18 22:07:54.035|Info|Завершение программы
+2016/11/18 22:09:29.645|Info|Запуск программы
+2016/11/18 22:11:06.239|Info|Завершение программы
+2016/11/19 11:17:17.943|Info|Запуск программы
+2016/11/19 11:17:34.047|Debug|System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception: Не удается найти указанный файл
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   в System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   в System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   в System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   в System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   в System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в Hotel.HotelForm.GetResidents() в d:\УЧЕБА\Диплом\Hotel\Hotel\Form1.cs:строка 64
+   в Hotel.HotelForm..ctor() в d:\УЧЕБА\Диплом\Hotel\Hotel\Form1.cs:строка 32
+2016/11/19 11:17:36.940|Debug|System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception: Не удается найти указанный файл
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   в System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   в System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   в System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   в System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   в System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   в System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   в System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   в System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   в System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   в System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   в Hotel.HotelForm.GetSumPrice(Decimal year) в d:\УЧЕБА\Диплом\Hotel\Hotel\Form1.cs:строка 182
+   в Hotel.HotelForm.graphic1_Load(Object sender, EventArgs e) в d:\УЧЕБА\Диплом\Hotel\Hotel\Form1.cs:строка 196
+2016/11/19 11:17:41.479|Info|Завершение программы
+2016/11/19 11:18:54.063|Info|Запуск программы
+2016/11/19 11:19:14.436|Info|Завершение программы
+2016/11/27 15:44:53.643|Info|Запуск программы
+2016/11/27 15:47:33.126|Info|Запуск программы
+2016/11/27 15:58:32.790|Info|Запуск программы
+2016/11/27 15:58:41.024|Info|Завершение программы
+2016/11/27 16:05:42.252|Info|Запуск программы
+2016/11/27 16:07:52.031|Info|Запуск программы
+2016/11/27 16:07:55.474|Info|Завершение программы
+2016/11/27 16:09:51.109|Info|Запуск программы
+2016/11/27 16:10:03.098|Info|Завершение программы
+2016/11/27 16:10:08.476|Info|Запуск программы
+2016/11/27 16:11:27.122|Info|Запуск программы
+2016/11/27 16:11:30.952|Info|Завершение программы
+2016/11/27 16:14:33.262|Info|Запуск программы
+2016/11/27 16:18:01.962|Info|Запуск программы
+2016/11/27 16:18:25.961|Info|Завершение программы
+2016/11/27 16:20:41.089|Info|Запуск программы
+2016/11/27 16:21:54.648|Info|Запуск программы
+2016/11/27 16:22:10.954|Info|Завершение программы
+2016/11/27 16:22:20.697|Info|Запуск программы
+2016/11/27 16:22:23.758|Info|Завершение программы
+2016/11/27 16:25:03.411|Info|Запуск программы
+2016/11/27 16:25:53.752|Info|Запуск программы
+2016/11/27 16:26:09.147|Info|Завершение программы
+2016/11/27 16:35:26.729|Info|Запуск программы
+2016/11/27 16:35:51.485|Info|Завершение программы
+2016/11/27 16:35:51.485|Info|Завершение программы
+2016/11/27 16:36:51.698|Info|Запуск программы
+2016/11/27 16:37:29.891|Info|Завершение программы
+2016/11/27 16:37:36.284|Info|Запуск программы
+2016/11/27 16:41:56.392|Info|Запуск программы
+2016/11/27 16:41:59.488|Info|Завершение программы
+2016/11/27 16:42:26.561|Info|Запуск программы
+2016/11/27 16:43:16.030|Info|Завершение программы
+2016/11/27 16:58:17.946|Info|Запуск программы
+2016/11/27 16:59:03.986|Info|Завершение программы
+2016/11/27 17:07:02.180|Info|Запуск программы
+2016/11/27 17:07:21.066|Info|Завершение программы
+2016/11/27 17:09:43.017|Info|Запуск программы
+2016/11/27 17:10:26.984|Info|Завершение программы
+2016/11/27 17:10:54.004|Info|Запуск программы
+2016/11/27 17:19:09.617|Info|Запуск программы
+2016/11/27 17:25:55.531|Info|Запуск программы
+2016/11/27 17:28:44.214|Info|Запуск программы
+2016/11/27 17:37:00.029|Info|Запуск программы
+2016/11/27 17:39:34.800|Info|Запуск программы
+2016/11/27 17:40:25.829|Info|Завершение программы
+2016/11/27 17:40:57.721|Info|Запуск программы
+2016/11/27 17:42:52.373|Info|Запуск программы
+2016/11/27 17:45:06.855|Info|Завершение программы
+2016/11/27 17:45:32.039|Info|Запуск программы
+2016/11/27 17:45:42.447|Info|Завершение программы
+2016/11/27 18:58:36.753|Info|Запуск программы
+2016/11/27 18:58:56.876|Info|Завершение программы
+2016/11/27 18:59:24.660|Info|Запуск программы
+2016/11/27 18:59:32.191|Info|Завершение программы
+2016/11/27 18:59:54.260|Info|Запуск программы
+2016/11/27 19:00:11.494|Info|Завершение программы
+2016/11/27 19:00:20.105|Info|Запуск программы
+2016/11/27 19:00:36.755|Info|Завершение программы
+2017/05/09 15:00:00.242|Info|Запуск программы
+2017/05/09 15:00:40.316|Info|Завершение программы

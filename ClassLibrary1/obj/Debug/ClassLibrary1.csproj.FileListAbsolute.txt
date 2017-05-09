@@ -1,0 +1,19 @@
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\bin\Debug\EntityFramework.dll
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\bin\Debug\EntityFramework.xml
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\EntityFramework.dll
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\EntityFramework.xml
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

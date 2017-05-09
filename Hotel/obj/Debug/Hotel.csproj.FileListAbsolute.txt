@@ -1,0 +1,59 @@
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\Hotel.exe.config
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\Hotel.exe
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\Hotel.pdb
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\ClassLibrary1.dll
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\EntityFramework.dll
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\EntityFramework.SqlServer.dll
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\ClassLibrary1.pdb
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\EntityFramework.xml
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\EntityFramework.SqlServer.xml
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.csprojResolveAssemblyReference.cache
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.Properties.Resources.resources
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.csproj.GenerateResource.Cache
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.exe
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.pdb
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.AddBookingForm.resources
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.AddResFromBookingForm.resources
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.AddResidentForm.resources
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.Graphic.resources
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.EditResidentForm.resources
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.RoomsForm.resources
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.ClientsForm.resources
+D:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.ImportXMLForm.resources
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\NLog.dll
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\NLog.xml
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\bin\Debug\NLog.config
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.AboutForm.resources
+d:\УЧЕБА\3 триместр\СВПП\Курсовой\Hotel\Hotel\obj\Debug\Hotel.HotelForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\Hotel.exe.config
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.exe
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.pdb
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\NLog.config
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\Hotel.exe
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\Hotel.pdb
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\ClassLibrary1.dll
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\EntityFramework.dll
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\EntityFramework.SqlServer.dll
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\NLog.dll
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\ClassLibrary1.pdb
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\EntityFramework.xml
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\EntityFramework.SqlServer.xml
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\NLog.xml
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.csprojResolveAssemblyReference.cache
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.AboutForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.AddBookingForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.AddResFromBookingForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.AddResidentForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.ClientsForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.EditResidentForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.HotelForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.Graphic.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.ImportXMLForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.Properties.Resources.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.RoomsForm.resources
+d:\УЧЕБА\Диплом\Hotel\Hotel\obj\Debug\Hotel.csproj.GenerateResource.Cache
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\log4net.dll
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\Remotion.Data.Linq.dll
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\Remotion.dll
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\Remotion.Interfaces.dll
+d:\УЧЕБА\Диплом\Hotel\Hotel\bin\Debug\log4net.xml

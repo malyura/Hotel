@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ГостиницаModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Бронирование">
+          <Key>
+            <PropertyRef Name="КодБронирования" />
+          </Key>
+          <Property Name="КодБронирования" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Фамилия" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Имя" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Отчество" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="ДатаБронирования" Type="date" Nullable="false" />
+          <Property Name="ДатаЗаселения" Type="date" Nullable="false" />
+          <Property Name="ДатаВыселения" Type="date" Nullable="false" />
+          <Property Name="Примечание" Type="varchar" MaxLength="200" />
+          <Property Name="КодНомера" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Категория">
+          <Key>
+            <PropertyRef Name="КодКатегории" />
+          </Key>
+          <Property Name="КодКатегории" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Категория" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="КолМест" Type="int" Nullable="false" />
+          <Property Name="Цена" Type="float" Nullable="false" />
+          <Property Name="Описание" Type="varchar" MaxLength="600" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Клиенты">
+          <Key>
+            <PropertyRef Name="КодКлиента" />
+          </Key>
+          <Property Name="КодКлиента" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Фамилия" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Имя" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Отчество" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="НомерПаспорта" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Регистрация" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Гражданство" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Номера">
+          <Key>
+            <PropertyRef Name="КодНомера" />
+          </Key>
+          <Property Name="КодНомера" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="НомерКомнаты" Type="int" Nullable="false" />
+          <Property Name="КодКатегории" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Проживание">
+          <Key>
+            <PropertyRef Name="КодПроживания" />
+          </Key>
+          <Property Name="КодПроживания" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ДатаЗаселения" Type="date" Nullable="false" />
+          <Property Name="ДатаВыселения" Type="date" Nullable="false" />
+          <Property Name="Стоимость" Type="float" Nullable="false" />
+          <Property Name="ДатаОплаты" Type="date" Nullable="false" />
+          <Property Name="КодНомера" Type="int" Nullable="false" />
+          <Property Name="КодКлиента" Type="int" Nullable="false" />
+          <Property Name="КодБронирования" Type="int" />
+        </EntityType>
+        <Association Name="FK__Бронирова__КодНо__108B795B">
+          <End Role="Номера" Type="Self.Номера" Multiplicity="1" />
+          <End Role="Бронирование" Type="Self.Бронирование" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Номера">
+              <PropertyRef Name="КодНомера" />
+            </Principal>
+            <Dependent Role="Бронирование">
+              <PropertyRef Name="КодНомера" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Номера__КодКатег__117F9D94">
+          <End Role="Категория" Type="Self.Категория" Multiplicity="1" />
+          <End Role="Номера" Type="Self.Номера" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Категория">
+              <PropertyRef Name="КодКатегории" />
+            </Principal>
+            <Dependent Role="Номера">
+              <PropertyRef Name="КодКатегории" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Проживани__КодБр__1273C1CD">
+          <End Role="Бронирование" Type="Self.Бронирование" Multiplicity="0..1" />
+          <End Role="Проживание" Type="Self.Проживание" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Бронирование">
+              <PropertyRef Name="КодБронирования" />
+            </Principal>
+            <Dependent Role="Проживание">
+              <PropertyRef Name="КодБронирования" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Проживани__КодКл__1367E606">
+          <End Role="Клиенты" Type="Self.Клиенты" Multiplicity="1" />
+          <End Role="Проживание" Type="Self.Проживание" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Клиенты">
+              <PropertyRef Name="КодКлиента" />
+            </Principal>
+            <Dependent Role="Проживание">
+              <PropertyRef Name="КодКлиента" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Проживани__КодНо__145C0A3F">
+          <End Role="Номера" Type="Self.Номера" Multiplicity="1" />
+          <End Role="Проживание" Type="Self.Проживание" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Номера">
+              <PropertyRef Name="КодНомера" />
+            </Principal>
+            <Dependent Role="Проживание">
+              <PropertyRef Name="КодНомера" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ГостиницаModelStoreContainer">
+          <EntitySet Name="Бронирование" EntityType="Self.Бронирование" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Категория" EntityType="Self.Категория" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Клиенты" EntityType="Self.Клиенты" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Номера" EntityType="Self.Номера" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Проживание" EntityType="Self.Проживание" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Бронирова__КодНо__108B795B" Association="Self.FK__Бронирова__КодНо__108B795B">
+            <End Role="Номера" EntitySet="Номера" />
+            <End Role="Бронирование" EntitySet="Бронирование" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Номера__КодКатег__117F9D94" Association="Self.FK__Номера__КодКатег__117F9D94">
+            <End Role="Категория" EntitySet="Категория" />
+            <End Role="Номера" EntitySet="Номера" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Проживани__КодБр__1273C1CD" Association="Self.FK__Проживани__КодБр__1273C1CD">
+            <End Role="Бронирование" EntitySet="Бронирование" />
+            <End Role="Проживание" EntitySet="Проживание" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Проживани__КодКл__1367E606" Association="Self.FK__Проживани__КодКл__1367E606">
+            <End Role="Клиенты" EntitySet="Клиенты" />
+            <End Role="Проживание" EntitySet="Проживание" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Проживани__КодНо__145C0A3F" Association="Self.FK__Проживани__КодНо__145C0A3F">
+            <End Role="Номера" EntitySet="Номера" />
+            <End Role="Проживание" EntitySet="Проживание" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ГостиницаModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Бронирование">
+          <Key>
+            <PropertyRef Name="КодБронирования" />
+          </Key>
+          <Property Name="КодБронирования" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Фамилия" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Имя" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Отчество" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ДатаБронирования" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ДатаЗаселения" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ДатаВыселения" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Примечание" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="КодНомера" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Номера" Relationship="Self.FK__Бронирова__КодНо__108B795B" FromRole="Бронирование" ToRole="Номера" />
+          <NavigationProperty Name="Проживание" Relationship="Self.FK__Проживани__КодБр__1273C1CD" FromRole="Бронирование" ToRole="Проживание" />
+        </EntityType>
+        <EntityType Name="Категория">
+          <Key>
+            <PropertyRef Name="КодКатегории" />
+          </Key>
+          <Property Name="КодКатегории" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Категория1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="КолМест" Type="Int32" Nullable="false" />
+          <Property Name="Цена" Type="Double" Nullable="false" />
+          <Property Name="Описание" Type="String" MaxLength="600" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Номера" Relationship="Self.FK__Номера__КодКатег__117F9D94" FromRole="Категория" ToRole="Номера" />
+        </EntityType>
+        <EntityType Name="Клиенты">
+          <Key>
+            <PropertyRef Name="КодКлиента" />
+          </Key>
+          <Property Name="КодКлиента" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Фамилия" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Имя" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Отчество" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="НомерПаспорта" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Регистрация" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Гражданство" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Проживание" Relationship="Self.FK__Проживани__КодКл__1367E606" FromRole="Клиенты" ToRole="Проживание" />
+        </EntityType>
+        <EntityType Name="Номера">
+          <Key>
+            <PropertyRef Name="КодНомера" />
+          </Key>
+          <Property Name="КодНомера" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="НомерКомнаты" Type="Int32" Nullable="false" />
+          <Property Name="КодКатегории" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Бронирование" Relationship="Self.FK__Бронирова__КодНо__108B795B" FromRole="Номера" ToRole="Бронирование" />
+          <NavigationProperty Name="Категория" Relationship="Self.FK__Номера__КодКатег__117F9D94" FromRole="Номера" ToRole="Категория" />
+          <NavigationProperty Name="Проживание" Relationship="Self.FK__Проживани__КодНо__145C0A3F" FromRole="Номера" ToRole="Проживание" />
+        </EntityType>
+        <EntityType Name="Проживание">
+          <Key>
+            <PropertyRef Name="КодПроживания" />
+          </Key>
+          <Property Name="КодПроживания" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ДатаЗаселения" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ДатаВыселения" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Стоимость" Type="Double" Nullable="false" />
+          <Property Name="ДатаОплаты" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="КодНомера" Type="Int32" Nullable="false" />
+          <Property Name="КодКлиента" Type="Int32" Nullable="false" />
+          <Property Name="КодБронирования" Type="Int32" />
+          <NavigationProperty Name="Бронирование" Relationship="Self.FK__Проживани__КодБр__1273C1CD" FromRole="Проживание" ToRole="Бронирование" />
+          <NavigationProperty Name="Клиенты" Relationship="Self.FK__Проживани__КодКл__1367E606" FromRole="Проживание" ToRole="Клиенты" />
+          <NavigationProperty Name="Номера" Relationship="Self.FK__Проживани__КодНо__145C0A3F" FromRole="Проживание" ToRole="Номера" />
+        </EntityType>
+        <Association Name="FK__Бронирова__КодНо__108B795B">
+          <End Role="Номера" Type="Self.Номера" Multiplicity="1" />
+          <End Role="Бронирование" Type="Self.Бронирование" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Номера">
+              <PropertyRef Name="КодНомера" />
+            </Principal>
+            <Dependent Role="Бронирование">
+              <PropertyRef Name="КодНомера" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Проживани__КодБр__1273C1CD">
+          <End Role="Бронирование" Type="Self.Бронирование" Multiplicity="0..1" />
+          <End Role="Проживание" Type="Self.Проживание" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Бронирование">
+              <PropertyRef Name="КодБронирования" />
+            </Principal>
+            <Dependent Role="Проживание">
+              <PropertyRef Name="КодБронирования" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Номера__КодКатег__117F9D94">
+          <End Role="Категория" Type="Self.Категория" Multiplicity="1" />
+          <End Role="Номера" Type="Self.Номера" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Категория">
+              <PropertyRef Name="КодКатегории" />
+            </Principal>
+            <Dependent Role="Номера">
+              <PropertyRef Name="КодКатегории" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Проживани__КодКл__1367E606">
+          <End Role="Клиенты" Type="Self.Клиенты" Multiplicity="1" />
+          <End Role="Проживание" Type="Self.Проживание" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Клиенты">
+              <PropertyRef Name="КодКлиента" />
+            </Principal>
+            <Dependent Role="Проживание">
+              <PropertyRef Name="КодКлиента" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Проживани__КодНо__145C0A3F">
+          <End Role="Номера" Type="Self.Номера" Multiplicity="1" />
+          <End Role="Проживание" Type="Self.Проживание" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Номера">
+              <PropertyRef Name="КодНомера" />
+            </Principal>
+            <Dependent Role="Проживание">
+              <PropertyRef Name="КодНомера" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ГостиницаContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Бронирование" EntityType="Self.Бронирование" />
+          <EntitySet Name="Категория" EntityType="Self.Категория" />
+          <EntitySet Name="Клиенты" EntityType="Self.Клиенты" />
+          <EntitySet Name="Номера" EntityType="Self.Номера" />
+          <EntitySet Name="Проживание" EntityType="Self.Проживание" />
+          <AssociationSet Name="FK__Бронирова__КодНо__108B795B" Association="Self.FK__Бронирова__КодНо__108B795B">
+            <End Role="Номера" EntitySet="Номера" />
+            <End Role="Бронирование" EntitySet="Бронирование" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Проживани__КодБр__1273C1CD" Association="Self.FK__Проживани__КодБр__1273C1CD">
+            <End Role="Бронирование" EntitySet="Бронирование" />
+            <End Role="Проживание" EntitySet="Проживание" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Номера__КодКатег__117F9D94" Association="Self.FK__Номера__КодКатег__117F9D94">
+            <End Role="Категория" EntitySet="Категория" />
+            <End Role="Номера" EntitySet="Номера" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Проживани__КодКл__1367E606" Association="Self.FK__Проживани__КодКл__1367E606">
+            <End Role="Клиенты" EntitySet="Клиенты" />
+            <End Role="Проживание" EntitySet="Проживание" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Проживани__КодНо__145C0A3F" Association="Self.FK__Проживани__КодНо__145C0A3F">
+            <End Role="Номера" EntitySet="Номера" />
+            <End Role="Проживание" EntitySet="Проживание" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ГостиницаModelStoreContainer" CdmEntityContainer="ГостиницаContext">
+          <EntitySetMapping Name="Бронирование">
+            <EntityTypeMapping TypeName="ГостиницаModel.Бронирование">
+              <MappingFragment StoreEntitySet="Бронирование">
+                <ScalarProperty Name="КодБронирования" ColumnName="КодБронирования" />
+                <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+                <ScalarProperty Name="Имя" ColumnName="Имя" />
+                <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+                <ScalarProperty Name="ДатаБронирования" ColumnName="ДатаБронирования" />
+                <ScalarProperty Name="ДатаЗаселения" ColumnName="ДатаЗаселения" />
+                <ScalarProperty Name="ДатаВыселения" ColumnName="ДатаВыселения" />
+                <ScalarProperty Name="Примечание" ColumnName="Примечание" />
+                <ScalarProperty Name="КодНомера" ColumnName="КодНомера" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Категория">
+            <EntityTypeMapping TypeName="ГостиницаModel.Категория">
+              <MappingFragment StoreEntitySet="Категория">
+                <ScalarProperty Name="КодКатегории" ColumnName="КодКатегории" />
+                <ScalarProperty Name="Категория1" ColumnName="Категория" />
+                <ScalarProperty Name="КолМест" ColumnName="КолМест" />
+                <ScalarProperty Name="Цена" ColumnName="Цена" />
+                <ScalarProperty Name="Описание" ColumnName="Описание" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Клиенты">
+            <EntityTypeMapping TypeName="ГостиницаModel.Клиенты">
+              <MappingFragment StoreEntitySet="Клиенты">
+                <ScalarProperty Name="КодКлиента" ColumnName="КодКлиента" />
+                <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+                <ScalarProperty Name="Имя" ColumnName="Имя" />
+                <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+                <ScalarProperty Name="НомерПаспорта" ColumnName="НомерПаспорта" />
+                <ScalarProperty Name="Регистрация" ColumnName="Регистрация" />
+                <ScalarProperty Name="Гражданство" ColumnName="Гражданство" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Номера">
+            <EntityTypeMapping TypeName="ГостиницаModel.Номера">
+              <MappingFragment StoreEntitySet="Номера">
+                <ScalarProperty Name="КодНомера" ColumnName="КодНомера" />
+                <ScalarProperty Name="НомерКомнаты" ColumnName="НомерКомнаты" />
+                <ScalarProperty Name="КодКатегории" ColumnName="КодКатегории" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Проживание">
+            <EntityTypeMapping TypeName="ГостиницаModel.Проживание">
+              <MappingFragment StoreEntitySet="Проживание">
+                <ScalarProperty Name="КодПроживания" ColumnName="КодПроживания" />
+                <ScalarProperty Name="ДатаЗаселения" ColumnName="ДатаЗаселения" />
+                <ScalarProperty Name="ДатаВыселения" ColumnName="ДатаВыселения" />
+                <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+                <ScalarProperty Name="ДатаОплаты" ColumnName="ДатаОплаты" />
+                <ScalarProperty Name="КодНомера" ColumnName="КодНомера" />
+                <ScalarProperty Name="КодКлиента" ColumnName="КодКлиента" />
+                <ScalarProperty Name="КодБронирования" ColumnName="КодБронирования" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
