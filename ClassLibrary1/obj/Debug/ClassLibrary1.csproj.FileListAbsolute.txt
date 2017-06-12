@@ -17,3 +17,4 @@ d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\EntityFramework.xml
 d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
 d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+d:\УЧЕБА\Диплом\Hotel\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
